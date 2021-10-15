@@ -11,7 +11,11 @@ const product = new mongoose.Schema(
 					"https://images.pexels.com/photos/4498135/pexels-photo-4498135.jpeg",
 			},
 		],
-		category: { type: mongoose.Schema.Types.ObjectId, ref: "category" },
+		category: {
+			type: mongoose.Schema.Types.ObjectId,
+			ref: "category",
+			required: true,
+		},
 	},
 	{ timestamps: true }
 );

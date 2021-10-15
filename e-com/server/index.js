@@ -8,8 +8,13 @@ const port = process.env.PORT || 9900;
 require("dotenv").config();
 
 app.use(cors());
-app.use(morgan("combined"));
+app.use(morgan("dev"));
 app.use(express.json());
+
+const { productRoute } = require("./route/index");
+/*********************************************** */
+app.use("/api/e-com/v1/product", productRoute);
+/*********************************************** */
 
 mongoose.connect(
 	process.env.MONGO_URL,
