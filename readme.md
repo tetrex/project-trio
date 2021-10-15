@@ -1,0 +1,9 @@
+# ENV REQUIRED IN EVERY CLIENT AND SERVER
+
+# E-com
+
+# \* server
+
+-
+- PORT
+- MONGO_URL
