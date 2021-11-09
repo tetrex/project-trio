@@ -11,10 +11,11 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
-const { productRoute, categoryRoute } = require("./route/index");
+const { productRoute, categoryRoute,userRoute } = require("./route/index");
 /*********************************************** */
 app.use("/api/e-com/v1/product", productRoute);
 app.use("/api/e-com/v1/category", categoryRoute);
+app.use("/api/e-com/v1/user", userRoute);
 /*********************************************** */
 
 mongoose.connect(

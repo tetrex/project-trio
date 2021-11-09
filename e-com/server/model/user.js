@@ -1,11 +1,15 @@
 const mongoose = require("mongoose");
 const user = new mongoose.Schema(
 	{
-		name: { type: String, required: true },
-		email: { type: String, required: true },
+		name: { type: String, },
+		email: { type: String, },
 		phoneNumber: { type: String },
-		passwordHash: { type: String, required: true },
+		passwordHash: { type: String, },
 		ecomFav: [{ type: mongoose.Schema.Types.ObjectId, ref: "product" }],
+		cart: {
+			type: mongoose.Schema.Types.ObjectId, ref: "cart"
+		}
+
 		// netflixFav: [{ type: mongoose.Schema.Types.ObjectId, ref: "product" }],
 		// spotifyFav: [{ type: mongoose.Schema.Types.ObjectId, ref: "product" }],
 	},
